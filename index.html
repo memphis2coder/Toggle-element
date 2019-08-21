@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Toggle an Element</title>
+    <!-- custom styles -->
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f7f7f7;
+        }
+
+        #myDiv {
+            padding: 50px 0;
+            margin-top: 20px;
+            text-align: center;
+            background-color: lightblue;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <p>Click the "Toggle" button to toggle between hiding and showing the DIV element:</p>
+
+    <button onclick="toggle()">Toggle</button>
+    <br>
+    <div id="myDiv">
+        This is my DIV element.
+    </div>
+
+    <!--javascript -->
+    <script>
+        function toggle() {
+            var x = document.getElementById('myDiv');
+
+            if (x.style.display === 'none') {
+                x.style.display = 'block';
+            } else {
+                x.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+
+</html>
